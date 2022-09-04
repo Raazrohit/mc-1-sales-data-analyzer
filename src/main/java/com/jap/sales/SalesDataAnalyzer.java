@@ -51,15 +51,4 @@ public class SalesDataAnalyzer {
         return salesData.get(0);
     }
 
-    public static void main(String[] args) {
-        SalesDataAnalyzer salesDataAnalyzer = new SalesDataAnalyzer();
-        String fileName = "src/main/resources/purchase_details.csv";
-        List<SalesRecord> salesRecords = salesDataAnalyzer.readFile(fileName);
-        System.out.println(salesRecords);
-
-        System.out.println(salesDataAnalyzer.getAllCustomersSortedByPurchaseAmount(salesRecords, new AmountComparator()));
-
-        System.out.println(salesDataAnalyzer.getTopCustomerWhoSpentMaxTimeOnSite(salesRecords, new TimeOnSiteComparator()));
-    }
-
 }
